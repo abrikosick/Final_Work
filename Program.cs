@@ -5,6 +5,7 @@
     {
         Console.WriteLine($"Enter {i + 1} word: ");
         array[i] = Console.ReadLine();
+        Console.WriteLine();
     }
     return array;
 }
@@ -30,4 +31,9 @@ string[] NewArray(string[] array, int size)
     return finalArray;
 }
 
+Console.WriteLine("Enter size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] initArray = InitialArray(size);
+ShowArray(initArray);
+ShowArray(NewArray(initArray, size));
 
