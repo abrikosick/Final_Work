@@ -15,6 +15,19 @@ void ShowArray(string[] array)
     Console.WriteLine();
 }
 
-
+string[] NewArray(string[] array, int size)
+{
+    int j = 0;
+    string[] finalArray = new string[size];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            finalArray[j] = array[i];
+            j++;
+        }
+    }
+    return finalArray;
+}
 
 
